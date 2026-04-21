@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ececec;
+  color: #ffffff;
+}
+
+.hero {
+  padding: 30px 0;
+}
+
+.hero__container {
+  max-width: 1120px;
+}
+
+.hero__card {
+  position: relative;
+  min-height: 640px;
+  overflow: hidden;
+  border-radius: 2px;
+  background-color: #000000;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.hero__card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(26, 40, 45, 0.52), rgba(26, 40, 45, 0.52)),
+    url("./img/Imagen uva.jpg") center/cover no-repeat;
+  z-index: 1;
+}
+
+.hero__header {
+  position: relative;
+  z-index: 3;
+  padding: 24px 28px 0;
+}
+
+.hero__header-row {
+  row-gap: 18px;
+}
+
+.hero__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #f38b2a;
+}
+
+.hero__brand-icon {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.hero__brand-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.hero__brand-text small {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  margin-top: 3px;
+}
+
+.hero__nav {
+  width: 100%;
+}
+
+.hero__menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hero__link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.hero__link:hover,
+.hero__link--active {
+  color: #f38b2a;
+}
+
+.hero__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+.hero__icon {
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero__icon:hover {
+  color: #f38b2a;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 3;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px 20px 60px;
+}
+
+.hero__content-box {
+  max-width: 760px;
+}
+
+.hero__subtitle {
+  color: #f38b2a;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 7px;
+  margin-bottom: 14px;
+}
+
+.hero__title {
+  font-size: 62px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 34px;
+}
+
+.hero__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 148px;
+  height: 52px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s;
+  padding: 0 24px;
+}
+
+.hero__button--primary {
+  background-color: #f38b2a;
+  color: #ffffff;
+  border: 2px solid #f38b2a;
+}
+
+.hero__button--primary:hover {
+  background-color: #ff9e44;
+  border-color: #ff9e44;
+  color: #ffffff;
+}
+
+.hero__button--secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #f38b2a;
+}
+
+.hero__button--secondary:hover {
+  background-color: #f38b2a;
+  color: #ffffff;
+}
+
+@media (max-width: 991.98px) {
+  .hero__header {
+    padding: 24px 20px 0;
+  }
+
+  .hero__menu {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .hero__actions {
+    justify-content: center;
+  }
+
+  .hero__title {
+    font-size: 48px;
+  }
+
+  .hero__subtitle {
+    font-size: 16px;
+    letter-spacing: 5px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero {
+    padding: 18px 0;
+  }
+
+  .hero__card {
+    min-height: 560px;
+  }
+
+  .hero__brand-text {
+    font-size: 24px;
+  }
+
+  .hero__menu {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero__content {
+    min-height: 450px;
+    padding: 20px 16px 40px;
+  }
+
+  .hero__title {
+    font-size: 38px;
+  }
+
+  .hero__subtitle {
+    font-size: 14px;
+    letter-spacing: 4px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero__header {
+    padding: 20px 14px 0;
+  }
+
+  .hero__brand {
+    gap: 8px;
+  }
+
+  .hero__brand-icon {
+    font-size: 22px;
+  }
+
+  .hero__brand-text {
+    font-size: 21px;
+  }
+
+  .hero__brand-text small {
+    font-size: 10px;
+  }
+
+  .hero__title {
+    font-size: 32px;
+  }
+
+  .hero__subtitle {
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  .hero__button {
+    min-width: 136px;
+    height: 48px;
+    font-size: 13px;
+  }
+}
